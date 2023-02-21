@@ -1,25 +1,13 @@
 import React from "react";
 import './Login.css';
-import LoginPicture from "./../../assets/images/yoga_img.jpg";
 import { Checkbox, Stack } from "@mui/material";
 import LoginInfo from "./../../assets/icons/login-icon.png";
-
+import FitnessBanner from "../../components/FitnessBanner";
 const Login = () => {
-    return <Stack direction="row" >
-        <div style={{ width: "70%" }}>
-            <img src={LoginPicture} alt="yoga pose" style={{ height: "577px" }}></img>
-        </div>
-        <div className="login-image-text">
-            <p>Slowly</p>
-            <p>but</p>
-            <p>Surely</p>
-            <p>you</p>
-            <p>will</p>
-            <p>get</p>
-            <p>there</p>
-        </div>
-
-        <div style={{ width: "42%", height: "577px", display: "flex", justifyContent: "center", alignItems: "center", backgroundImage: "linear-gradient(to right, black, #e5e5e5)" }}>
+    return <Stack direction="row"  className="box-container" >
+       
+       <FitnessBanner></FitnessBanner>
+        <div   style={{ width: "100%", height: "577px", display: "flex", justifyContent: "center", alignItems: "center" }}>
             <img src={LoginInfo} alt="person" style={{ position: "absolute", right: "16%", bottom: "62%", zIndex: "1" }} ></img>
             <form className="login-form">
                 <label for="username" className="inputs-label">UserName  </label>
