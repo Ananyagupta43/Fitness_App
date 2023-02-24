@@ -109,13 +109,20 @@ body {
 
 /* Navbar css  */
 
+.main-container{
+  background-image: url('./assets/images/yelow_glow_black_man.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hoverLink {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .hoverLink:hover {
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 700;
+
 
 }
 
@@ -124,7 +131,6 @@ body {
   background-color: transparent;
   width: 190px;
   height: 80px;
-  padding-left: 30px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -156,16 +162,20 @@ body {
 }
 
 .flip-box-front {
-  background-color: #bbb;
-  color: black;
+  background: transparent !important;;
+  color: transparent;
+  padding-left:20px !important;
 }
 
 /* Style the back side */
 .flip-box-back {
-  background-color: dodgerblue;
-  color: white;
+  background: transparent !important;;
+  color: transparent;
+  padding-left:20px !important;
   transform: rotateY(180deg);
 }
+
+
 
 /* navbar css ends  */
 
@@ -177,6 +187,13 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+/* new banner */
+
+.newBanner{
+
+height:89vh
 }
 
 @media screen and (max-width:1200px) {
