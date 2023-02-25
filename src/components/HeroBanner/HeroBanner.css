@@ -1,6 +1,7 @@
 .box-container {
   width: 100%;
-  height: 89vh;
+  height: 100vh;
+  background-image: url('../../assets/images/yelow_glow_black_man.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

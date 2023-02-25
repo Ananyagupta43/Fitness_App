@@ -109,12 +109,6 @@ body {
 
 /* Navbar css  */
 
-.main-container{
-  background-image: url('./assets/images/yelow_glow_black_man.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .hoverLink {
   font-family: Arial, Helvetica, sans-serif;
 }
