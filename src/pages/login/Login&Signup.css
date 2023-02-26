@@ -9,10 +9,10 @@
 } */
 .form {
     height: fit-content;
-    width: fit-content;
+    width: 450px;
     padding: 30px;
-    background-image: linear-gradient(#000000, #1d1c1c) !important;
-    /* background-color: rgba(255,255,255,0.13); */
+    /* background-image: linear-gradient(#000000, #1d1c1c) !important; */
+    background-color: rgba(255,255,255,0.13);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.102);
@@ -20,38 +20,302 @@
 }
 
 .inputs-label {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     display: block;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    /* background-color: #f3f38d; */
+    width: fit-content;
+    backdrop-filter: blur (50px);
+    /* border-radius: 10px; */
+    /* backdrop-filter: blur(10px) saturate(70%); */
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
 }
 
 .inputs {
     display: block;
-    height: 40px;
+    height: 50px;
     width: 100%;
-    border: 2px solid black !important;
-    /* background-color: rgba(255, 255, 255, 0.07); */
-    border-radius: 3px;
+    border: 0px solid rgb(233, 233, 23) !important;
+    /* background-color: #ffff6e; */
+    background-color: rgb(233, 233, 23);
+    border-radius: 10px;
     padding: 0 10px;
     margin: 10px 0;
     font-size: 15px;
-    color: white;
+    backdrop-filter: blur(10px);
+    /* border: 2px solid rgba(255, 255, 255, 0.102); */
+    box-shadow: 0 0 40px rgba(216, 255, 74, 0.415);
 }
 
 ::placeholder {
     color: black;
+    font-weight: 600;
 }
 
 .button {
-    margin-top: 20px;
-    width: 100%;
-    background-color: black;
-    color: white;
+    border: 2px solid white!important;
+    border-radius: 30px !important;
+    background: transparent !important;
+    margin: auto;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: rgb(254, 250, 250) !important;
+    width: 255px;
     padding: 10px 0;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.1);
+    position: relative;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+.button span {
+    transition: all 0.3s;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.1, 1);
+    border-radius: 30px !important;
+}
+
+.button:hover span {
+    letter-spacing: 2px;
+}
+
+.button:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px !important;
+}
+
+.button:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+/* animation */
+
+.background {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.falling-object {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 25px);
+    /* background-image: url('./anan.png'); */
+    background-image: url("./../../assets/icons/anan.png");
+    /* backdrop-filter: blur(40px); */
+    background-size: cover;
+    animation: fall 7s linear infinite;
+}
+
+.object-1 {
+    top: -70px;
+    left: 15%;
+    ;
+}
+
+.object-2 {
+    top: -120px;
+    left: 35%;
+}
+
+.object-3 {
+    top: -100px;
+    left: -11%;
+
+}
+
+.object-4 {
+    top: -85px;
+    left: 65%;
+
+}
+
+.object-5 {
+    top: -120px;
+    left: 85%;
+
+}
+
+.object-6 {
+    top: -30px;
+    left: 02%;
+
+}
+
+/* @keyframes fall {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(calc(100vh + 100px));
+    }
+  }  */
+
+@keyframes fall {
+    0% {
+        transform: translate(0, -50px);
+    }
+
+    100% {
+        transform: translate(300px, calc(100vh + 100px));
+    }
+}
+
+.falling-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 25px);
+    background-image: url("./../../assets/icons/anan.png");
+    background-size: cover;
+    animation: gir 25s linear infinite;
+}
+
+.icon-1 {
+    top: -165px;
+    left: 65%;
+    ;
+}
+
+.icon-2 {
+    top: -110px;
+    left: 35%;
+}
+
+.icon-3 {
+    top: -100px;
+    left: 1%;
+
+}
+
+.icon-4 {
+    top: -85px;
+    left: 75%;
+
+}
+
+.icon-5 {
+    top: -120px;
+    left: 95%;
+
+}
+
+.icon-6 {
+    top: -130px;
+    left: 22%;
+
+}
+
+
+@keyframes gir {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 100px));
+    }
+}
+
+.falling-sticker {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 25px);
+    background-image: url("./../../assets/icons/anan.png");
+    background-size: cover;
+    animation: girna 12s linear infinite;
+}
+
+.sticker-1 {
+    top: -70px;
+    left: 25%;
+    ;
+}
+
+.sticker-2 {
+    top: -130px;
+    left: 40%;
+}
+
+.sticker-3 {
+    top: -100px;
+    left: 5%;
+
+}
+
+.sticker-4 {
+    top: -115px;
+    left: 75%;
+
+}
+
+.sticker-5 {
+    top: -50px;
+    left: 95%;
+
+}
+
+.sticker-6 {
+    top: -20px;
+    left: 62%;
+
+}
+
+@keyframes girna {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 100px));
+    }
 }
