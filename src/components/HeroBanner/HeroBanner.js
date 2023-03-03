@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react'
 import { Box, Stack, Typography, Button } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
 import anime from 'animejs';
 import styles from './HeroBanner.css';
 import Navbar from '../Navbar.js';
+import { useRef } from 'react';
+
+
 const HeroBanner = () => {
   return (
     <Box
       className="box-container"  >
-        <Navbar/>
+      <Navbar />
       <Stack direction="row" gap="30%">
         <Stack className="contents-bar">
           <Typography fontWeight="700" className="main-txt mid-txt"
